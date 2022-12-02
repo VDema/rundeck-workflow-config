@@ -1,0 +1,21 @@
+- defaultTab: nodes
+  description: ''
+  executionEnabled: true
+  id: 14eff329-2dd8-453c-8131-21c52bedd5a4
+  loglevel: INFO
+  name: Schedule Down Pricing
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - configuration:
+        messageBody: '{ "id" : "5" }'
+        topic: arn:aws:sns:eu-central-1:236226271052:RetailRundeck_Rundeck
+      nodeStep: false
+      type: sns
+    keepgoing: false
+    strategy: node-first
+  uuid: 14eff329-2dd8-453c-8131-21c52bedd5a4
+
